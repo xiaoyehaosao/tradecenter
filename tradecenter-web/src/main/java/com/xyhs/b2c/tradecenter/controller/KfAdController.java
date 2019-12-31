@@ -1,9 +1,15 @@
 package com.xyhs.b2c.tradecenter.controller;
 
 
+import com.xyhs.b2c.tradecenter.entity.KfAd;
+import com.xyhs.b2c.tradecenter.service.IKfAdService;
+import com.xyhs.common.tools.ExecuteResult;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * <p>
@@ -16,6 +22,19 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/tradecenter/kf-ad")
 public class KfAdController {
+
+
+    @Resource
+    private IKfAdService iKfAdService;
+
+
+    @GetMapping("queryById")
+    public ExecuteResult queryById(Long id){
+
+       KfAd result = iKfAdService.getById(id);
+       return ExecuteResult.ok(result);
+    }
+
 
 }
 
