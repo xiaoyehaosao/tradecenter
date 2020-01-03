@@ -22,6 +22,8 @@ public class KfAd extends BaseEntity {
 
     private static final long serialVersionUID=1L;
 
+    private Long id;
+
     @TableField("createDate")
     private LocalDateTime createDate;
 
