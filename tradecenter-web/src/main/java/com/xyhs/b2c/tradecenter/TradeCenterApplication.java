@@ -14,7 +14,6 @@ import org.springframework.context.annotation.ComponentScan;
 //@SpringBootApplication(scanBasePackages = {"com.xyhs.common.config"})
 @MapperScan("com.xyhs.b2c.tradecenter.mapper")
 @SpringCloudApplication
-@ComponentScan("com.xyhs.common.config")
 public class TradeCenterApplication {
 
     public static void main(String[] args) {
