@@ -1,4 +1,4 @@
-/*
+
 package com.xyhs.b2c.tradecenter;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
@@ -8,13 +8,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-*/
+
 /**
  * @author ljp
  * @apiNote
  * @date 11:42 2019/12/25
- **//*
-
+ **/
 @EnableTransactionManagement
 @Configuration
 @MapperScan("com.xyhs.b2c.*.mapper*")
@@ -29,4 +28,4 @@ public class MyBatisPlusConfig {
         return new PaginationInterceptor();
     }
 }
-*/
+
