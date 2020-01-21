@@ -22,6 +22,7 @@
         <spring-boot-dependencies.version>2.1.4.RELEASE</spring-boot-dependencies.version>
         <tradecenter.version>0.0.1-SNAPSHOT</tradecenter.version>
         <common.core.version>0.0.1-SNAPSHOT</common.core.version>
+        <spring.platform.version>Cairo-SR8</spring.platform.version>
     </properties>
 
     <dependencyManagement>
@@ -41,6 +42,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>${spring.platform.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
             <!-- tradecenter 依赖 -->
             <dependency>
                 <groupId>com.xyhs.b2c</groupId>

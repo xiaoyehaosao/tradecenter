@@ -7,7 +7,7 @@
         <groupId>com.xyhs.b2c</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>tradecenter-export</artifactId>
