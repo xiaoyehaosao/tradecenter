@@ -1,6 +1,7 @@
 package com.xyhs.b2c.tradecenter.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.xyhs.b2c.common.tools.base.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;

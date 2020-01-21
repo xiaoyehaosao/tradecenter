@@ -12,10 +12,14 @@
     <artifactId>tradecenter-dao</artifactId>
 
     <dependencies>
-
         <dependency>
             <groupId>com.xyhs.b2c</groupId>
             <artifactId>tradecenter-export</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.xyhs.b2c</groupId>
+            <artifactId>common-core-boot</artifactId>
+            <version>${common.core.version}</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>

@@ -1,7 +1,7 @@
 package com.xyhs.b2c.tradecenter.feign;
 
-import com.xyhs.b2c.tradecenter.fallback.IKfAdFallback;
-import com.xyhs.common.tools.ExecuteResult;
+import com.xyhs.b2c.common.tools.api.R;
+import com.xyhs.b2c.tradecenter.entity.KfAd;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,10 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @apiNote
  * @date 17:53 2020/1/3
  **/
-@FeignClient(
-        value ="/tradecenter/kf-ad",
-        fallback = IKfAdFallback.class
-)
+@FeignClient(name = "xyhs-tradecenter")
 public interface IKfAdClient {
 
     /**
@@ -22,6 +19,6 @@ public interface IKfAdClient {
      * @param id id
      * @return 查询结果
      */
-    @GetMapping("/queryById")
-    ExecuteResult queryById(@RequestParam("id")Long id);
+    @GetMapping("/kfAd/queryById")
+    R<KfAd> queryById(@RequestParam("id")Long id);
 }

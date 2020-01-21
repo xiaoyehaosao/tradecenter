@@ -1,8 +1,9 @@
 package com.xyhs.b2c.tradecenter.fallback;
 
+import com.xyhs.b2c.common.tools.api.R;
+import com.xyhs.b2c.common.tools.api.ResultCode;
 import com.xyhs.b2c.tradecenter.feign.IKfAdClient;
-import com.xyhs.common.enumcode.ResultCode;
-import com.xyhs.common.tools.ExecuteResult;
+
 
 /**
  * @author ljp
@@ -12,7 +13,7 @@ import com.xyhs.common.tools.ExecuteResult;
 public class IKfAdFallback implements IKfAdClient {
 
     @Override
-    public ExecuteResult queryById(Long id)  {
-        return ExecuteResult.faield(ResultCode.FAILURE.getCode(),"未获取到账号信息");
+    public R queryById(Long id)  {
+        return R.fail(ResultCode.FAILURE,"未获取到账号信");
     }
 }
