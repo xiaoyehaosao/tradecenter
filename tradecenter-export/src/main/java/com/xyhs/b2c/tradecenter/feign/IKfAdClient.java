@@ -2,6 +2,7 @@ package com.xyhs.b2c.tradecenter.feign;
 
 import com.xyhs.b2c.common.tools.api.R;
 import com.xyhs.b2c.tradecenter.entity.KfAd;
+import com.xyhs.b2c.tradecenter.fallback.IKfAdFallback;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @apiNote
  * @date 17:53 2020/1/3
  **/
-@FeignClient(name = "xyhs-tradecenter")
+@FeignClient(name = "xyhs-tradecenter" ,fallback = IKfAdFallback.class)
 public interface IKfAdClient {
 
     /**

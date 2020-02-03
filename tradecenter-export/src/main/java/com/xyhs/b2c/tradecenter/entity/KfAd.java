@@ -21,8 +21,8 @@ import java.time.LocalDateTime;
 @Accessors(chain = true)
 public class KfAd extends BaseEntity {
 
-    private static final long serialVersionUID=1L;
 
+    private static final long serialVersionUID = -4922916997386478110L;
     private Long id;
 
     @TableField("createDate")

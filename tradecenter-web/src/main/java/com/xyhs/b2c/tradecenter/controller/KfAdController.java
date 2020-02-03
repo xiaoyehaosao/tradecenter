@@ -29,7 +29,8 @@ public class KfAdController {
 
 
     @GetMapping("/queryById")
-    public R<KfAd> queryById(@RequestParam("id")Long id){
+    public R<KfAd> queryById(@RequestParam("id")Long id) throws InterruptedException {
+        Thread.sleep(3000L);
        KfAd result = iKfAdService.getById(id);
        return R.data(result);
     }
